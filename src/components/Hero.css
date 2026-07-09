@@ -1,0 +1,119 @@
+.hero {
+  padding: 84px 0 100px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(155deg, var(--navy) 0%, var(--navy-2) 100%);
+  color: #fff;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -200px;
+  right: -180px;
+  width: 560px;
+  height: 560px;
+  background: radial-gradient(circle, rgba(244, 128, 31, 0.22), transparent 70%);
+  pointer-events: none;
+}
+
+.hero__row {
+  display: grid;
+  grid-template-columns: 1.05fr 0.85fr;
+  gap: 56px;
+  align-items: center;
+  position: relative;
+}
+
+.hero__title {
+  font-size: clamp(38px, 5vw, 60px);
+  line-height: 1.08;
+  font-weight: 800;
+  margin: 22px 0 20px;
+  color: #fff;
+}
+
+.hero__title-accent { color: var(--orange); }
+
+.hero__sub {
+  font-size: 17.5px;
+  line-height: 1.65;
+  color: #C9D2E3;
+  max-width: 480px;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 14px;
+  margin: 36px 0 6px;
+  flex-wrap: wrap;
+}
+
+.hero__visual { position: relative; }
+
+.hero__card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 20px;
+  padding: 30px 28px 26px;
+  backdrop-filter: blur(6px);
+}
+
+.hero__card-top {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 26px;
+}
+
+.hero__pillars {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.hero__pillar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  padding: 18px 10px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  font-size: 13px;
+  font-weight: 600;
+  color: #E7EBF4;
+}
+
+.hero__pillar-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(244, 128, 31, 0.16);
+  color: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.hero__card-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: #9AA6BC;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  padding-top: 16px;
+}
+
+@media (max-width: 900px) {
+  .hero__row { grid-template-columns: 1fr; }
+  .hero__sub { max-width: 100%; }
+  .hero { padding: 52px 0 68px; }
+}
